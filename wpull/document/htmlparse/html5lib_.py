@@ -1,6 +1,6 @@
 '''Parsing using html5lib python.'''
 import html5lib.constants
-import html5lib.tokenizer
+import html5lib._tokenizer
 import io
 import os.path
 
@@ -24,7 +24,7 @@ class HTMLParser(BaseParser):
         return ValueError
 
     def parse(self, file, encoding=None):
-        tokenizer = html5lib.tokenizer.HTMLTokenizer(
+        tokenizer = html5lib._tokenizer.HTMLTokenizer(
             file, encoding=encoding,
             useChardet=False if encoding else True,
             parseMeta=False if encoding else True,
@@ -97,7 +97,7 @@ if __name__ == '__main__':
         'testing', 'samples', 'xkcd_1.html'
         )
     with open(path, 'rb') as in_file:
-        tokenizer = html5lib.tokenizer.HTMLTokenizer(in_file)
+        tokenizer = html5lib._tokenizer.HTMLTokenizer(in_file)
 
         for token in tokenizer:
             print(token)
