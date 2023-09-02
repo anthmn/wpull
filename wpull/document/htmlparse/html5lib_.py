@@ -25,9 +25,8 @@ class HTMLParser(BaseParser):
 
     def parse(self, file, encoding=None):
         tokenizer = html5lib._tokenizer.HTMLTokenizer(
-            file, encoding=encoding,
+            file, likely_encoding=encoding,
             useChardet=False if encoding else True,
-            parseMeta=False if encoding else True,
         )
 
         tag = None
