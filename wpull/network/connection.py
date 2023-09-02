@@ -10,7 +10,7 @@ import socket
 import ssl
 
 import tornado.netutil
-from tornado.netutil import SSLCertificateError
+
 from typing import Optional, Union
 from wpull.backport.logging import BraceMessage as __
 from wpull.errors import NetworkError, ConnectionRefused, SSLVerificationError, \
@@ -305,7 +305,7 @@ class BaseConnection(object):
             self.close()
             raise NetworkTimedOut(
                 '{name} timed out.'.format(name=name)) from error
-        except (tornado.netutil.SSLCertificateError, SSLVerificationError) \
+        except (SSLVerificationError) \
                 as error:
             self.close()
             raise SSLVerificationError(
