@@ -226,6 +226,7 @@ class Builder(object):
                 download_stop_pipeline, conversion_pipeline, app_stop_pipeline
             ))
         pipeline_series.concurrency_pipelines.add(download_pipeline)
+        pipeline_series.concurrency = app_session.args.concurrent
 
         return pipeline_series
 
