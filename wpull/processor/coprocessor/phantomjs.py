@@ -8,7 +8,7 @@ import os
 import tempfile
 import io
 
-import namedlist
+import wpull.thirdparty.namedlist as namedlist
 import asyncio
 
 from typing import Callable

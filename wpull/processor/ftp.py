@@ -9,7 +9,7 @@ import posixpath
 import tempfile
 import urllib.parse
 
-import namedlist
+import wpull.thirdparty.namedlist as namedlist
 from typing import cast
 
 from wpull.backport.logging import StyleAdapter

@@ -2,7 +2,7 @@
 import re
 
 import itertools
-import namedlist
+import wpull.thirdparty.namedlist as namedlist
 
 from wpull.protocol.ftp.ls.date import parse_datetime
 import wpull.protocol.ftp.ls.date

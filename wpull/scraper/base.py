@@ -2,7 +2,7 @@
 import abc
 import collections
 import io
-import namedlist
+import wpull.thirdparty.namedlist as namedlist
 
 from wpull.document.base import BaseTextStreamReader, \
     BaseHTMLReader, BaseExtractiveReader

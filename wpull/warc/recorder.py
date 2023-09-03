@@ -10,7 +10,7 @@ import os.path
 import re
 import shutil
 
-import namedlist
+import wpull.thirdparty.namedlist as namedlist
 
 from wpull.backport.logging import StyleAdapter
 from wpull.namevalue import NameValueRecord

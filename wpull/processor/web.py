@@ -4,7 +4,7 @@ import gettext
 import io
 import logging
 
-import namedlist
+import wpull.thirdparty.namedlist as namedlist
 import asyncio
 
 from typing import cast, Tuple
